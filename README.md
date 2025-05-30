@@ -22,6 +22,20 @@ Set up using **VMware Workstation Pro 17**:
 - `COMPONENTS` – PVWA, CPM, and PSM combined (10.0.0.3)
 
 📸 _VM structure and network settings
+<table>
+  <tr>
+    <td align="center"><b>VMware Workstation View</b><br><img src="https://github.com/user-attachments/assets/49564de8-ddbb-4165-8363-39a20652a0c4" width="800"/></td>
+    <td align="center"><b>Vault IP Configuration</b><br><img src="https://github.com/user-attachments/assets/ef41507d-fe8c-4c9e-9004-38fe14056104" width="800"/></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center"><b>AD VM IP Settings</b><br><img src="https://github.com/user-attachments/assets/654541b9-9f5e-4e35-b75b-ac6af60c8a5e" width="800"/></td>
+    <td align="center"><b>COMPONENTS VM IP Settings</b><br><img src="https://github.com/user-attachments/assets/c9d73e17-7ec3-470c-9ffc-afed8b52f87e" width="800"/></td>
+  </tr>
+</table>
+
 ![VAULT-2025-05-26-20-25-39](https://github.com/user-attachments/assets/ef41507d-fe8c-4c9e-9004-38fe14056104)
 ![Screenshot_2](https://github.com/user-attachments/assets/49564de8-ddbb-4165-8363-39a20652a0c4)
 ![Active Directory-2025-05-28-21-01-23](https://github.com/user-attachments/assets/654541b9-9f5e-4e35-b75b-ac6af60c8a5e)
