@@ -1,26 +1,24 @@
 # 🔐 CyberArk Privileged Access Security (PAS) Lab – Full Enterprise Simulation
 
 ## 🎯 Objective
-To simulate a real-world deployment of **CyberArk PAS v12.6** using a personal lab built with VMware Workstation. The lab includes configuration of:
-- Digital Vault
+To simulate a full deployment of **CyberArk PAS v12.6** using a personal lab environment. This included:
+- CyberArk Digital Vault
 - PVWA (Password Vault Web Access)
 - CPM (Central Policy Manager)
 - PSM (Privileged Session Manager)
-- Active Directory Domain Controller (AD)
+- Active Directory (Domain Controller)
 
-This mirrors enterprise environments and demonstrates hands-on proficiency in Privileged Access Management (PAM).
+This mirrors real-world enterprise infrastructure and demonstrates core skills in Privileged Access Management (PAM).
 
 ---
 
-## 🧱 1. Virtual Environment Setup
+## 🧱 1. Virtual Environment Overview
 
-Created 3 virtual machines in **VMware Workstation Pro 17**:
+Lab built using **VMware Workstation Pro 17** with the following VMs:
 
 - `VAULT` – CyberArk Vault Server (`10.0.0.1`)
-- `Active Directory (DC-01)` – Domain Controller (`10.0.0.2`)
-- `COMPONENTS` – Combined PVWA, CPM, PSM (`10.0.0.3`)
-
-**Vault IP Configuration:**
+- `DC-01` – Domain Controller (`10.0.0.2`)
+- `PVWA-CPM-PSM` – Shared VM for remaining components (`10.0.0.3`)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/ef41507d-fe8c-4c9e-9004-38fe14056104" width="75%"/>
@@ -30,11 +28,9 @@ Created 3 virtual machines in **VMware Workstation Pro 17**:
 
 ## 🧩 2. Vault Setup
 
-- Installed **VMware Tools** and required **.NET Framework**
-- Performed the full installation of **CyberArk Digital Vault**
-- Verified Vault initialization via PrivateArk Server
-
-**Vault Installation Confirmation:**
+- Created and configured the `VAULT` VM
+- Installed .NET prerequisites and **CyberArk Vault**
+- Confirmed Vault was initialized using **PrivateArk Server**
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/06e8002e-fcf6-4fab-b984-94c967c3af26" width="75%"/>
@@ -44,11 +40,10 @@ Created 3 virtual machines in **VMware Workstation Pro 17**:
 
 ---
 
-## 🧩 3. Active Directory (AD) Setup
+## 🧩 3. Active Directory Setup
 
-- Renamed VM to `DC-01`
 - Set static IP: `10.0.0.2`, DNS: `127.0.0.1`
-- Promoted to Domain Controller for the domain `CYBERARK.COM`
+- Renamed machine to `DC-01` and promoted it to Domain Controller for `CYBERARK.COM`
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0d12ae23-7abe-44eb-93f6-151aa7d9d21e" width="75%"/>
@@ -56,12 +51,11 @@ Created 3 virtual machines in **VMware Workstation Pro 17**:
 
 ---
 
-## 🧩 4. PVWA, CPM, and PSM on Shared VM
+## 🧩 4. PVWA, CPM, and PSM Setup on Shared VM
 
-- Created third VM: `COMPONENTS`
+- Created new VM `PVWA-CPM-PSM`
 - Set static IP: `10.0.0.3`, DNS: `10.0.0.2`
-- Joined domain `CYBERARK.COM`
-- Installed **VMware Tools** and required .NET framework
+- Joined to domain `CYBERARK.COM`
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a7058cfb-626f-428a-b34e-5840a62a4d94" width="75%"/>
@@ -71,72 +65,82 @@ Created 3 virtual machines in **VMware Workstation Pro 17**:
 
 ---
 
-### ✅ PVWA Installation
-- Ran PowerShell pre-install script
-- Installed **Password Vault Web Access**
+## ✅ PVWA Installation
+
+- Ran pre-installation PowerShell script
+- Installed **PVWA**
 - Verified access via browser
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4cd88a91-5b4d-4540-928d-8bea7bc8b77f" width="75%"/>
   <br><br>
   <img src="https://github.com/user-attachments/assets/fd5398f6-9648-47f5-b923-1832ef19307b" width="75%"/>
-</p>
-
-📍 Navigated to: `https://10.0.0.3/PasswordVault`
-
-<p align="center">
+  <br><br>
   <img src="https://github.com/user-attachments/assets/ee7d191c-659c-41dc-81e2-8b0490438cd4" width="75%"/>
 </p>
 
 ---
 
-### ✅ CPM Installation
+## ✅ CPM Installation
+
 - Executed `CPM_PreInstallation.ps1`
+- Installed and registered **Central Policy Manager**
 
-- Installed **CPM** and registered with Vault
-
-📸 _PowerShell output or CPM install success screen_
-![PVWA-CPM-PSM-2025-05-29-18-30-02](https://github.com/user-attachments/assets/e58cfb79-00d4-4d5f-a980-3fc869b1e3f4)
-![PVWA-CPM-PSM-2025-05-29-18-35-35](https://github.com/user-attachments/assets/2b4bd284-647f-4448-8bba-c9903a37f567)
-
----
-
-### ✅ PSM Installation
-- Completed PowerShell setup steps
-- Installed **PSM**
-- Verified connection to Vault and service status
-
-📸 _PSM installation or service status screenshot_
-![PVWA-CPM-PSM-2025-05-29-18-57-33](https://github.com/user-attachments/assets/95a3a523-070d-4373-a707-3bcbe88bc3e2)
-![PVWA-CPM-PSM-2025-05-29-18-47-57](https://github.com/user-attachments/assets/e04c5b7c-98de-4718-822b-740d23f94e62)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e58cfb79-00d4-4d5f-a980-3fc869b1e3f4" width="75%"/>
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/2b4bd284-647f-4448-8bba-c9903a37f567" width="75%"/>
+</p>
 
 ---
 
-## ✅ 5. Final Validation in PVWA
-- Logged into PVWA and confirmed:
-  - Vault: ✅ Connected
-  - CPM: ✅ Connected
-  - PSM: ✅ Connected
+## ✅ PSM Installation
 
-📸 _Screenshot of PVWA dashboard showing component connectivity_
-![PVWA-CPM-PSM-2025-05-29-19-03-22](https://github.com/user-attachments/assets/109bcac9-e916-4447-8cfd-f506c876dad7)
+- Installed **Privileged Session Manager**
+- Validated successful installation and service connection
 
----
-
-## 📚 What I Learned
-- How to deploy and configure the full **CyberArk PAS ecosystem**
-- Setup of AD, DNS, static IPs, domain join, and service registration
-- Executed and interpreted PowerShell install scripts
-- Gained working knowledge of PAM workflows: credential vaulting, session control
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/95a3a523-070d-4373-a707-3bcbe88bc3e2" width="75%"/>
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/e04c5b7c-98de-4718-822b-740d23f94e62" width="75%"/>
+</p>
 
 ---
 
-## 💼 Why It Matters
-This lab proves hands-on capability with:
-- CyberArk infrastructure setup
-- Active Directory integration
-- Secure session & credential management
+## ✅ Final Validation in PVWA
+
+Logged into PVWA and confirmed all components were connected and operational:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/109bcac9-e916-4447-8cfd-f506c876dad7" width="75%"/>
+</p>
 
 ---
 
-📌 _Built fully on VMware Workstation 17 Pro in a local lab using Windows Server 2016 VMs._
+## 📚 Key Skills Gained
+
+- Full **CyberArk PAS** deployment and configuration
+- Domain Controller setup and integration
+- PowerShell scripting for CyberArk installations
+- Component interconnectivity and troubleshooting
+- Web-based administration of PAM operations
+
+---
+
+## 💼 Why This Matters
+
+This project demonstrates real-world capability to:
+
+- Deploy and manage CyberArk security infrastructure
+- Work across networked systems and AD environments
+- Secure privileged credentials and manage user sessions
+
+🔐 _Ideal preparation for roles such as:_
+- CyberArk Engineer / PAM Engineer  
+- Identity & Access Management Analyst  
+- Privileged Access Administrator
+
+---
+
+📌 _Lab built entirely using VMware Workstation 17 Pro with Windows Server 2016._
+
