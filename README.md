@@ -92,9 +92,12 @@ Created 3 virtual machines in **VMware Workstation Pro 17**:
 
 ### ✅ CPM Installation
 - Executed `CPM_PreInstallation.ps1`
+
 - Installed **CPM** and registered with Vault
 
 📸 _PowerShell output or CPM install success screen_
+![PVWA-CPM-PSM-2025-05-29-18-30-02](https://github.com/user-attachments/assets/e58cfb79-00d4-4d5f-a980-3fc869b1e3f4)
+![PVWA-CPM-PSM-2025-05-29-18-35-35](https://github.com/user-attachments/assets/2b4bd284-647f-4448-8bba-c9903a37f567)
 
 ---
 
@@ -104,6 +107,8 @@ Created 3 virtual machines in **VMware Workstation Pro 17**:
 - Verified connection to Vault and service status
 
 📸 _PSM installation or service status screenshot_
+![PVWA-CPM-PSM-2025-05-29-18-57-33](https://github.com/user-attachments/assets/95a3a523-070d-4373-a707-3bcbe88bc3e2)
+![PVWA-CPM-PSM-2025-05-29-18-47-57](https://github.com/user-attachments/assets/e04c5b7c-98de-4718-822b-740d23f94e62)
 
 ---
 
@@ -114,6 +119,7 @@ Created 3 virtual machines in **VMware Workstation Pro 17**:
   - PSM: ✅ Connected
 
 📸 _Screenshot of PVWA dashboard showing component connectivity_
+![PVWA-CPM-PSM-2025-05-29-19-03-22](https://github.com/user-attachments/assets/109bcac9-e916-4447-8cfd-f506c876dad7)
 
 ---
 
