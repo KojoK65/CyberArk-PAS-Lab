@@ -1,4 +1,4 @@
-# 🔐 CyberArk Privileged Access Security (PAS) Lab – Full Enterprise Simulation
+# 🔐 CyberArk Privileged Access Security (PAS) Lab 
 
 ## 🎯 Objective
 To simulate a full deployment of **CyberArk PAS v12.6** using a personal lab environment. This included:
