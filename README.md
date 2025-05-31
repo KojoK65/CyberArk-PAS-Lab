@@ -8,81 +8,85 @@ To simulate a real-world deployment of **CyberArk PAS v12.6** using a personal l
 - PSM (Privileged Session Manager)
 - Active Directory Domain Controller (AD)
 
-This setup mirrors enterprise environments and demonstrates hands-on proficiency in Privileged Access Management (PAM).
+This mirrors enterprise environments and demonstrates hands-on proficiency in Privileged Access Management (PAM).
 
 ---
 
-## 🛠️ Lab Overview
+## 🧱 1. Virtual Environment Setup
 
-### 🧱 1. Virtual Environment with 3 VMs
-Set up using **VMware Workstation Pro 17**:
+Created 3 virtual machines in **VMware Workstation Pro 17**:
 
-- `VAULT` (10.0.0.1)
-- `Active Directory` – Domain Controller (10.0.0.2)
-- `COMPONENTS` – PVWA, CPM, and PSM combined (10.0.0.3)
+- `VAULT` – CyberArk Vault Server (`10.0.0.1`)
+- `Active Directory (DC-01)` – Domain Controller (`10.0.0.2`)
+- `COMPONENTS` – Combined PVWA, CPM, PSM (`10.0.0.3`)
 
-📸 _VM structure and network settings
-<table>
-  <tr>
-    <td align="center"><b>VMware Workstation View</b><br><img src="https://github.com/user-attachments/assets/49564de8-ddbb-4165-8363-39a20652a0c4" width="800"/></td>
-    <td align="center"><b>Vault IP Configuration</b><br><img src="https://github.com/user-attachments/assets/ef41507d-fe8c-4c9e-9004-38fe14056104" width="800"/></td>
-  </tr>
-</table>
+**Vault IP Configuration:**
 
-<table>
-  <tr>
-    <td align="center"><b>AD VM IP Settings</b><br><img src="https://github.com/user-attachments/assets/654541b9-9f5e-4e35-b75b-ac6af60c8a5e" width="800"/></td>
-    <td align="center"><b>COMPONENTS VM IP Settings</b><br><img src="https://github.com/user-attachments/assets/c9d73e17-7ec3-470c-9ffc-afed8b52f87e" width="800"/></td>
-  </tr>
-</table>
-
-![VAULT-2025-05-26-20-25-39](https://github.com/user-attachments/assets/ef41507d-fe8c-4c9e-9004-38fe14056104)
-![Screenshot_2](https://github.com/user-attachments/assets/49564de8-ddbb-4165-8363-39a20652a0c4)
-![Active Directory-2025-05-28-21-01-23](https://github.com/user-attachments/assets/654541b9-9f5e-4e35-b75b-ac6af60c8a5e)
-![PVWA-CPM-PSM-2025-05-28-20-26-34](https://github.com/user-attachments/assets/c9d73e17-7ec3-470c-9ffc-afed8b52f87e)
-
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ef41507d-fe8c-4c9e-9004-38fe14056104" width="75%"/>
+</p>
 
 ---
 
 ## 🧩 2. Vault Setup
-- Created the `VAULT` VM and installed **VMware Tools**
-- Installed .NET prerequisites and **CyberArk Vault**
-- Vault successfully initialized and ready for connection
 
-📸 _Screenshot of Vault installation success screen_
-![VAULT-2025-05-26-20-42-57](https://github.com/user-attachments/assets/06e8002e-fcf6-4fab-b984-94c967c3af26)
-![VAULT-2025-05-26-20-42-41](https://github.com/user-attachments/assets/fb00b66e-6ef6-4bac-945e-80db20e0cbe6)
+- Installed **VMware Tools** and required **.NET Framework**
+- Performed the full installation of **CyberArk Digital Vault**
+- Verified Vault initialization via PrivateArk Server
 
+**Vault Installation Confirmation:**
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/06e8002e-fcf6-4fab-b984-94c967c3af26" width="75%"/>
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/fb00b66e-6ef6-4bac-945e-80db20e0cbe6" width="75%"/>
+</p>
 
 ---
 
-## 🧩 3. Active Directory Domain Controller (AD)
-- Created and renamed VM to `DC-01`
-- Configured static IP: `10.0.0.2`, DNS: `127.0.0.1`
-- Promoted to Domain Controller for `CYBERARK.COM`
-- Enabled Remote Desktop
+## 🧩 3. Active Directory (AD) Setup
 
-📸 _Screenshot of domain promotion or DC role install_
+- Renamed VM to `DC-01`
+- Set static IP: `10.0.0.2`, DNS: `127.0.0.1`
+- Promoted to Domain Controller for the domain `CYBERARK.COM`
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0d12ae23-7abe-44eb-93f6-151aa7d9d21e" width="75%"/>
+</p>
 
 ---
 
 ## 🧩 4. PVWA, CPM, and PSM on Shared VM
-- Created a third VM named `COMPONENTS`
+
+- Created third VM: `COMPONENTS`
 - Set static IP: `10.0.0.3`, DNS: `10.0.0.2`
 - Joined domain `CYBERARK.COM`
-- Enabled Remote Desktop, installed .NET & VMware Tools
+- Installed **VMware Tools** and required .NET framework
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a7058cfb-626f-428a-b34e-5840a62a4d94" width="75%"/>
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/eae5c60e-a3de-4840-bb9d-8d65be8d7756" width="75%"/>
+</p>
 
 ---
 
 ### ✅ PVWA Installation
-- Ran PowerShell pre-installation script
-- Installed **PVWA**
-- Accessed `https://10.0.0.3/PasswordVault` in browser and logged in
+- Ran PowerShell pre-install script
+- Installed **Password Vault Web Access**
+- Verified access via browser
 
-📸 _PVWA login page screenshot_  
-📍 *Open browser in VM → go to `https://<PVWA-IP>/PasswordVault`*
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4cd88a91-5b4d-4540-928d-8bea7bc8b77f" width="75%"/>
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/fd5398f6-9648-47f5-b923-1832ef19307b" width="75%"/>
+</p>
+
+📍 Navigated to: `https://10.0.0.3/PasswordVault`
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ee7d191c-659c-41dc-81e2-8b0490438cd4" width="75%"/>
+</p>
 
 ---
 
