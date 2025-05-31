@@ -135,11 +135,6 @@ This project demonstrates real-world capability to:
 - Work across networked systems and AD environments
 - Secure privileged credentials and manage user sessions
 
-🔐 _Ideal preparation for roles such as:_
-- CyberArk Engineer / PAM Engineer  
-- Identity & Access Management Analyst  
-- Privileged Access Administrator
-
 ---
 
 📌 _Lab built entirely using VMware Workstation 17 Pro with Windows Server 2016._
