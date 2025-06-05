@@ -1,7 +1,7 @@
 <h1 align="center">🔐 CyberArk Privileged Access Security (PAS) Lab</h1>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9b960343-712a-4e02-b4ab-b66ca1362b46" alt="CyberArk PAS Lab" width="500">
+  <img src="https://github.com/user-attachments/assets/9b960343-712a-4e02-b4ab-b66ca1362b46" alt="CyberArk PAS Lab" width="350">
 </p>
 
 
