@@ -122,7 +122,7 @@ Logged into PVWA and confirmed all components were connected and operational:
 
 ---
 
-## 📚 Key Skills Gained
+## 📚 Key Skills Demonstrated
 
 - Full **CyberArk PAS** deployment and configuration
 - Domain Controller setup and integration
