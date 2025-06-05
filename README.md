@@ -14,7 +14,7 @@ This mirrors real-world enterprise infrastructure and demonstrates core skills i
 
 ## 🧱 1. Virtual Environment Overview
 
-Lab built using **VMware Workstation Pro 17** with the following VMs:
+Lab built using the following VMs:
 
 - `VAULT` – CyberArk Vault Server (`10.0.0.1`)
 - `DC-01` – Domain Controller (`10.0.0.2`)
@@ -136,6 +136,3 @@ This project demonstrates real-world capability to:
 - Secure privileged credentials and manage user sessions
 
 ---
-
-📌 _Lab built entirely using VMware Workstation 17 Pro with Windows Server 2016._
-
